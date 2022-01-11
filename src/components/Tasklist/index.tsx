@@ -10,7 +10,7 @@ export const Tasklist = ({item}: Props) =>{
   const [isChecked, setIsChecked] = useState(item.checked);
   
   return(
-    <Container>
+    <Container check = {isChecked}>
       <input 
       type="checkbox" 
       checked={isChecked}
