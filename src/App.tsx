@@ -1,26 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Container,Main,Header } from './App.styles';
+import { useState } from 'react';
+import {Task} from './types/Task'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+const App = () => {
+  const [tasks, setTasks] = useState<Task[]>([
+    {id : 1,task: 'Terminar Projeto',checked : false},
+  ]);
+  
+  return(
+    <Container>
+      <Main>
+        <Header>Lista de Tarefas</Header>
+        
+      </Main>
+    </Container>
   );
 }
-
-export default App;
+export default App
