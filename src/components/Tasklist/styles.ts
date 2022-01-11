@@ -1,6 +1,11 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+type ContainerProps = {
+  check : boolean; 
+}
+
+export const Container = styled.div(({ check }: ContainerProps )=>(
+  `
   display: flex;
   background-color: #20212C;
   padding: 10px;
@@ -18,5 +23,7 @@ export const Container = styled.div`
   label{
     color: #ccc;
     font-weight: bold;
+    text-decoration: ${check ? 'line-through' : 'initial'};
   }
 `
+));
