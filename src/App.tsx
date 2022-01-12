@@ -2,6 +2,7 @@ import { Container,Main,Header } from './App.styles';
 import { useState } from 'react';
 import {Task} from './types/Task'
 import { Tasklist } from './components/Tasklist';
+import { AddTaskBox } from './components/AddTaskBox';
 
 const App = () => {
   const [tasks, setTasks] = useState<Task[]>([
@@ -12,6 +13,8 @@ const App = () => {
     <Container>
       <Main>
         <Header>Lista de Tarefas</Header>
+
+        <AddTaskBox> Area para adicionar Tarefas</AddTaskBox>
         {tasks.map((item,index)=>(
           <Tasklist key={index} item={item}/>
         ))}
