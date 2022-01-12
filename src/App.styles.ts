@@ -18,4 +18,8 @@ export const Header = styled.h1`
   text-align: center;
   border-bottom: 1px solid #444;
   padding-bottom: 20px;
+  background: linear-gradient(to right, #9b59b6 0%, #e74c3c 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 `
