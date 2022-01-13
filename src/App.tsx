@@ -14,12 +14,9 @@ const App = () => {
       <Main>
         <Header>Lista de Tarefas</Header>
 
-        <AddTaskBox> Area para adicionar Tarefas</AddTaskBox>
-        {tasks.map((item,index)=>(
-          <Tasklist key={index} item={item}/>
-        ))}
+          {tasks.map((item,index)=>(
+        <Tasklist key={index} item={item}/>))}
       </Main>
     </Container>
-  );
-}
+  )}
 export default App
